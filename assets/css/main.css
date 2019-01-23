@@ -3,15 +3,28 @@ font-family: 'Black Ops One', cursive;
 font-family: 'Monoton', cursive;
 font-family: 'Space Mono', monospace;
 font-family: 'Faster One', cursive;
-font-family: 'Monofett', cursive; */
+font-family: 'Monofett', cursive; 
+font-family: 'Pacifico', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Staatliches', cursive;
+*/
 
+body{
+    background-color: lightgray;
+}
 .title{
-    font-family: 'Black Ops One', cursive;
     border-style: solid;
-    Border-color: red;
+    font-family: 'Staatliches', cursive;
+    border-color: #ffab40;
 }
 
 .train-schedule-entries{
-    font-family: 'Monofett', cursive;
     font-size: 2em;
 }
+
+/* .footer{
+}
+
+.input-row{
+    
+} */

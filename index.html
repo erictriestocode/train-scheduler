@@ -1,5 +1,6 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,90 @@
     <!-- Stylesheets/Fonts -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Faster+One|Monofett|Monoton|Space+Mono" rel="stylesheet">
-    <!-- Main JS -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Permanent+Marker|Staatliches" rel="stylesheet">
+    <!-- Main JS scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/js/moment.js"></script> 
     <script src="assets/js/main.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <div class="title col s12 m6">
+        <div class="title col s12 m6 center-align">
             <h1>Train Tracker!</h1>
         </div>
+        <div class="divider"></div>
         <div class="description">
 
         </div>
-        <div class="train-schedule-main">
-            <div class="train-schedule-entries collection">
-                <ul>
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                    <li>Four</li>
-                    <li>Five</li>
-                </ul>
+        <div class="train-schedule-main col s12 m6">
+            <div class="train-schedule-entries collection col s12 m6">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Train Line</th>
+                            <th>Destination</th>
+                            <th>Frequency</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>AmTrak</td>
+                            <td>Detroit</td>
+                            <td>30</td>
+                            <td>5:30PM</td>
+                            <td>45</td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
             <!-- populated trains here -->
         </div>
 
-        <div class="train-input">
-            <!-- input form here -->
+        <div class="train-input col s12 m6">
+            <div class="row input-row valign-wrapper">
+                <div class="input-field col s3">
+                    <input placeholder="Train Line" id="input-trainLine" type="text" class="validate">
+                    <label for="input-trainLine">Train Line</label>
+                </div>
+                <div class="input-field col s3">
+                    <input placeholder="Destination" id="input-destination" type="text" class="validate">
+                    <label for="input-destination">Destination</label>
+                </div>
+                <div class="input-field col s3">
+                    <input placeholder="Departure Time" id="input-departureTime" type="text" class="validate">
+                    <label for="input-departureTime">Departure Time(24HR)</label>
+                </div>
+                <div class="input-field col s3">
+                    <input placeholder="Frequency" id="input-frequency" type="text" class="validate">
+                    <label for="input-frequency">Frequency(Minutes)</label>
+                </div>
+            </div>
+           
         </div>
 
+        <div class="divider"></div>
 
-        <div class="footer page-footer">
-            
+        <div class="add-train-button center-align">
+                <a class="waves-effect waves-light btn-large" id="user-add-train"><i class="material-icons right">train</i>Add Train</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="footer page-footer orange accent-2 col s12 m6">
+
         </div>
 
     </div>
-    
+
 </body>
+
 </html>
