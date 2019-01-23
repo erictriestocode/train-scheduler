@@ -4,3 +4,14 @@ font-family: 'Monoton', cursive;
 font-family: 'Space Mono', monospace;
 font-family: 'Faster One', cursive;
 font-family: 'Monofett', cursive; */
+
+.title{
+    font-family: 'Black Ops One', cursive;
+    border-style: solid;
+    Border-color: red;
+}
+
+.train-schedule-entries{
+    font-family: 'Monofett', cursive;
+    font-size: 2em;
+}
