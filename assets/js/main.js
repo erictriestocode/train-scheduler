@@ -54,7 +54,12 @@ $(document).ready(function () {
         // will relocate after getting time
         pushToDom(userTrain, userDestination, userDepartTime, userFrequency);
 
-        trainSchedule.push(userTrainFull);
+        trainSchedule.ref().push({
+            train: userTrain,
+            destination: userDestination,
+            departure: userDepartTime,
+            frequency: userFrequency
+        });
     });
 
     // function caluclateTimeDiff() {
@@ -74,8 +79,8 @@ $(document).ready(function () {
         $("<tr>").appendTo("#push-here");
         $("<td>" + a + "</td>").appendTo("#push-here");
         $("<td>" + b + "</td>").appendTo("#push-here");
-        $("<td>" + c + "</td>").appendTo("#push-here");
         $("<td>" + d + "</td>").appendTo("#push-here");
+        $("<td>" + c + "</td>").appendTo("#push-here");
         $("<td>" + e + "</td>").appendTo("#push-here");
         $("</tr>").appendTo("#push-here");
 
