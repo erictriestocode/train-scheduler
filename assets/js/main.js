@@ -22,6 +22,7 @@ $(document).ready(function () {
     var userFrequency;
     var userTrainFull;
     var currentTime;
+    var 
     // Firebase Variable for Use
     var trainSchedule = firebase.database();
 
@@ -85,23 +86,36 @@ $(document).ready(function () {
 
     };
 
-    // Calculate time with MotionJS
-    // function calculateMins(){
-    // MotionJS goes here
-    // Take current time minus current time
-    // };
+
+
+    // honestly taking a lot of th is from 7-21 train example from class(that we didnt go over)
     currentTime = moment();
     console.log(currentTime);
+    
+    var firstTime = "03:30";
 
+    // First Time (pushed back 1 year to make sure it comes before current time)
+    var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+    console.log(firstTimeConverted);
 
+    // Current Time
+    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
+    // Difference between the times
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    console.log("DIFFERENCE IN TIME: " + diffTime);
 
+    // Time apart (remainder)
+    var tRemainder = diffTime % tFrequency;
+    console.log(tRemainder);
 
+    // Minute Until Train
+    var tMinutesTillTrain = tFrequency - tRemainder;
+    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
-
-
-
-
+    // Next Train
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
 
 });
