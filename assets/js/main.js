@@ -63,10 +63,7 @@ $(document).ready(function () {
         });
     });
 
-    // function caluclateTimeDiff() {
-
-
-    // }
+  
 
     function pushToDom(a, b, c, d, e) {
 
