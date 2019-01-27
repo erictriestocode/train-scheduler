@@ -21,6 +21,7 @@ $(document).ready(function () {
     var userDepartTime;
     var userFrequency;
     var userTrainFull;
+    var currentTime;
     // Firebase Variable for Use
     var trainSchedule = firebase.database();
 
@@ -52,7 +53,7 @@ $(document).ready(function () {
         console.log(userFrequency);
 
         // will relocate after getting time
-        pushToDom(userTrain, userDestination, userDepartTime, userFrequency);
+        pushToDom(userTrain, userDestination, userDepartTime, userFrequency, currentTime);
 
         trainSchedule.push(userTrainFull);
     });
@@ -87,6 +88,9 @@ $(document).ready(function () {
     // MotionJS goes here
     // Take current time minus current time
     // };
+    currentTime = moment();
+    console.log(currentTime);
+
 
 
 
