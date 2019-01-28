@@ -22,7 +22,6 @@ $(document).ready(function () {
     var userFrequency;
     var userTrainFull;
     var currentTime;
-    var 
     // Firebase Variable for Use
     var trainSchedule = firebase.database();
 
